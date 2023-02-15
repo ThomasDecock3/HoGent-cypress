@@ -5,8 +5,8 @@ export const todoPage = {
     showincompleterb: '#mat-radio-3-input',
     showincompletelabel: '#mat-radio-3 > .mdc-form-field > label',
     columns: {
-        complete: '.cdk-column-complete',
-        description: '.cdk-column-description'
+        complete: '.mat-mdc-header-row > .cdk-column-complete',
+        description: '.mat-mdc-header-row > .cdk-column-description'
     },
     rows: {
         first: ':nth-child(1) > .table-row',

@@ -1,20 +1,22 @@
+import todoObject from '../data-objects/todoObject.json'
 import { todoPage } from "../page-objects/todoPage"
 
-const todoUrl = 'http://localhost:4200/api/todo'
+const todoUrl = 'http://hogenttodoapp.s3-website-eu-west-1.amazonaws.com/api/todo'
 
 describe('Todo homepage', () => {
     beforeEach(() => {
         cy.intercept('GET', todoUrl, {
             fixture: 'todo.json'
         }).as('todos')
-        cy.visit('/todo')
+        cy.visit('/')
+        cy.wait('@todos')
     })
 
     it('App title should be visible', () => {
         cy.get(todoPage.title)
             .should('be.visible')
             .and('not.be.empty')
-            .and('have.text', 'Todo App')
+            .and('have.text', todoObject.TODOTITLE)
         // cy.get('.app-title').should('be.visible').and('not.be.empty').contains('Todo App')
     })
     it('Show All/Incomplete radio buttons should be visible', () => {
@@ -41,13 +43,13 @@ describe('Todo homepage', () => {
             .get(todoPage.completebuttonlabel).should('have.text', 'Complete')
             .get(todoPage.edittodobutton.first).should('be.visible')
             .get(todoPage.detailbutton.first).should('be.visible')
-            .get(todoPage.description.first).should('have.text', 'clean my garage')
+            .get(todoPage.description.first).should('have.text', todoObject.DESCRIPTION.FIRST)
 
         cy.get(todoPage.rows.second).should('be.visible')
             .get(todoPage.completedicon.second).should('be.visible')
             .get(todoPage.completebuttonlabel).should('have.text', 'Complete')
             .get(todoPage.edittodobutton.second).should('be.visible')
             .get(todoPage.detailbutton.second).should('be.visible')
-            .get(todoPage.description.second).should('have.text', 'make my home work')
+            .get(todoPage.description.second).should('have.text', todoObject.DESCRIPTION.SECOND)
     })
 })

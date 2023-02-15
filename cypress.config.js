@@ -5,6 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'http://localhost:4200',
+    baseUrl: 'http://hogenttodoapp.s3-website-eu-west-1.amazonaws.com/',
   },
 });
