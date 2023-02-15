@@ -1,0 +1,9 @@
+node_modules
+cypress/videos
+cypress/screenshots
+cypress/test-results
+.vscode
+package-lock.json
+yarn-error.log
+yarn.lock
+cypress/results
