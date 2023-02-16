@@ -53,6 +53,6 @@ npx cypress run
 
 ## Exercise
 
-Ik heb al enkele testen voorzien [installing-cli e1693232](./videos/e2e.cy.js.mp4)
+Ik heb al enkele testen voorzien [installing-cli e1693232](edit-button.PNG)
 
 In de fixtures folder vinden jullie alle jsons die je nodig hebt om bepaalde calls te gaan intercepten
