@@ -1,8 +1,10 @@
 {
     "TODOTITLE": "Todo App",
     "EDITTITLE": "Edit todo",
+    "ADDTITLE": "Add todo",
     "DESCRIPTION": {
         "FIRST": "clean my garage",
-        "SECOND": "make my home work"
+        "SECOND": "make my home work",
+        "THIRD": "create a new todo item"
     }
 }

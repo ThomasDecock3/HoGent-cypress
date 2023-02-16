@@ -53,6 +53,31 @@ npx cypress run
 
 ## Exercise
 
-Ik heb al enkele testen voorzien ![installing-cli e1693232](edit-button.PNG)
+Ik heb al enkele testen voorzien.
+Onder andere voor het updaten van de description van een todo item en het completen van een todo.
+Nu mogen jullie de todo-detail flow die achter deze knop zit automatiseren.
 
-In de fixtures folder vinden jullie alle jsons die je nodig hebt om bepaalde calls te gaan intercepten
+![edit-button](edit-button.PNG)
+
+De eerste aanzet heb ik al gegeven in de e2e.cy.js file.
+Jullie mogen hier op verder bouwen, ik verwacht de volgende dingen. 
+
+Stap 1
+-Het description veld unlocken door bovenaan rechts op het slotje te klikken
+-De description clearen en updaten naar 'make my home work'
+-Op de edit knop klikken en de call intercepten 
+-Eens je op die knop gaat duwen gaat er een call worden uitgestuurd die je kan intercepten, 
+ deze lijkt verdacht veel op een intercept die je elders op de edit.cy.js file kan terug vinden
+
+Stap 2 
+-Kijken of het completed icoontje rood, rgb(255, 0, 0), is
+-De todo completen door op de make complete knop te drukken 
+-De complete call intercepten - deze kan je ergens terug vinden
+-Kijken of het completed icoontje groen, rgb(0, 128, 0), is
+
+Stap 3
+-En als laatste gaan we naar de home button om te kijken of alles geupdate is
+-Je gaat hier de call ook weer moeten intercepten om naar de homepage terug te gaan. 
+-Je kan hier de updated-todos.json aan meegeven die beschikbaar is in de fixtures. 
+
+Reminder: Je gaat een nieuwe file willen aanmaken om al je page-objects in te declareren 

@@ -13,6 +13,7 @@ export const todoPage = {
         second: ':nth-child(2) > .table-row'
     },
     completebutton: '#btn-complete-todo-2 > .mat-mdc-button-touch-target',
+    completebuttonnewlyadded: '#btn-complete-todo-3 > .mat-mdc-button-touch-target',
     completebuttonlabel: '.mdc-button__label > span',
     detailbutton: {
         first: ':nth-child(1) > .table-row > [tabindex="0"] > .mat-mdc-button-touch-target',
@@ -25,10 +26,13 @@ export const todoPage = {
     description: {
         first: ':nth-child(1) > .table-row > .description-text',
         second: ':nth-child(2) > .table-row > .description-text',
+        newlyadded: '.mat-mdc-row.ng-star-inserted > .table-row > .description-text',
     },
     completedicon: {
-        first: '#icn-completed-todo-2',
-        second: '#icn-completed-todo-1'
-    }
+        first: '#icn-completed-todo-1',
+        second: '#icn-completed-todo-2',
+        third: '#icn-completed-todo-3'
+    },
+    addbutton: '#add-task-btn > .mat-mdc-button-touch-target'
 
 }
