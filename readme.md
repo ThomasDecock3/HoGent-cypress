@@ -1,12 +1,19 @@
+## If you dont have npm installed already, install nodejs
+
 <p align="center">
-  <a href="https://www.cypress.io">
-    <picture>
-      <source media="(prefers-color-scheme: dark)"  srcset="./assets/cypress-logo-dark.png">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/cypress-logo-light.png">
-      <img alt="Cypress Logo" src="./assets/cypress-logo-light.png">
-    </picture>    
-  </a>
+Download the Windows Installer from NodeJs official website. Make sure you have downloaded the latest version of NodeJs. It includes the NPM package manager.
+https://nodejs.org/en/download/
+
+you can follow the following tutorial: https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac
 </p>
+
+Once npm is installed you can open up a terminal, navigate to the cypress project and run the following command 
+
+```bash
+npm i
+```
+
+
 <p align="center">
   <a href="https://on.cypress.io">Documentation</a> |
   <a href="https://on.cypress.io/changelog">Changelog</a> |
@@ -19,9 +26,6 @@
 
 <p align="center">
   Fast, easy and reliable testing for anything that runs in a browser.
-</p>
-<p align="center">
-  Join us, we're <a href="https://cypress.io/jobs">hiring</a>.
 </p>
 
 <p align="center">
@@ -60,3 +64,15 @@ yarn add cypress --dev
 
 ![installing-cli e1693232](https://user-images.githubusercontent.com/1271364/31740846-7bf607f0-b420-11e7-855f-41c996040d31.gif)
 
+To start the UI version of the cypress tests enter one of following commands. This will allow you to run a specific spec page, which should include multiple tests.
+
+```bash
+npx cypress open
+```
+
+If you prefer a quick check, it's better to run all tests in a headless mode. Headless mode still downloads all the html information yet does not render it on screen. This makes a significant difference in time. And is also how the tests will run in the pipeline, meaning that you should have the habit to run the headless tests before making the pr. 
+
+Enter the following command 
+```bash
+npx cypress run 
+```
