@@ -1,11 +1,11 @@
 import todoObject from '../data-objects/todoObject.json'
 import { todoPage } from "../page-objects/todoPage"
 
-const todoUrl = 'http://hogenttodoapp.s3-website-eu-west-1.amazonaws.com/api/todo'
+const baseUrl = 'http://hogenttodoapp.s3-website-eu-west-1.amazonaws.com/api/todo'
 
 describe('Todo homepage', () => {
     beforeEach(() => {
-        cy.intercept('GET', todoUrl, {
+        cy.intercept('GET', baseUrl, {
             fixture: 'todo.json'
         }).as('todos')
         cy.visit('/')
@@ -46,7 +46,7 @@ describe('Todo homepage', () => {
             .get(todoPage.description.first).should('have.text', todoObject.DESCRIPTION.FIRST)
 
         cy.get(todoPage.rows.second).should('be.visible')
-            .get(todoPage.completedicon.second).should('be.visible')
+            .get(todoPage.completedicon.first).should('be.visible')
             .get(todoPage.completebuttonlabel).should('have.text', 'Complete')
             .get(todoPage.edittodobutton.second).should('be.visible')
             .get(todoPage.detailbutton.second).should('be.visible')
