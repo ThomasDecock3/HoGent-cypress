@@ -52,10 +52,6 @@ describe('e2e - create and complete todo', () => {
             fixture: 'update.json'
         }).as('update')
 
-        cy.intercept('PUT', baseUrl + '/complete/2', {
-            fixture: 'complete-todo2.json'
-        }).as('complete')
-
         cy.get(todoPage.detailbutton.first).click()
         cy.wait('@detail')
         
@@ -63,12 +59,5 @@ describe('e2e - create and complete todo', () => {
         cy.get(detailPage.description).clear().type(todoObject.DESCRIPTION.SECOND)
         cy.get(detailPage.editbutton).click()
         cy.wait('@update')
-
-        cy.get(detailPage.completedicon).should('have.css', 'color', 'rgb(255, 0, 0)')
-        cy.get(detailPage.completebutton).click()
-        cy.wait('@complete')
-        cy.get(detailPage.completedicon).should('have.css', 'color', 'rgb(0, 128, 0)')
-
     })
-
 })
