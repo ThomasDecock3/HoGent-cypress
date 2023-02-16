@@ -53,6 +53,6 @@ npx cypress run
 
 ## Exercise
 
-Ik heb al enkele testen voorzien ./videos/e2e.cy.js.mp4
+Ik heb al enkele testen voorzien (./videos/e2e.cy.js.mp4)
 
 In de fixtures folder vinden jullie alle jsons die je nodig hebt om bepaalde calls te gaan intercepten
