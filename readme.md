@@ -14,32 +14,6 @@ npm i
 ```
 
 
-<p align="center">
-  <a href="https://on.cypress.io">Documentation</a> |
-  <a href="https://on.cypress.io/changelog">Changelog</a> |
-  <a href="https://on.cypress.io/roadmap">Roadmap</a>
-</p>
-
-<h3 align="center">
-  The web has evolved. Finally, testing has too.
-</h3>
-
-<p align="center">
-  Fast, easy and reliable testing for anything that runs in a browser.
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/cypress">
-    <img src="https://img.shields.io/npm/dm/cypress.svg" alt="npm"/>
-  </a>
-  <a href="https://gitter.im/cypress-io/cypress">
-    <img src="https://img.shields.io/gitter/room/cypress-io/cypress.svg" alt="Gitter chat"/>
-  </a>
-    <a href="https://stackshare.io/cypress">
-    <img src="https://img.stackshare.io/misc/follow-on-stackshare-badge.svg" alt="StackShare"/>
-  </a><br />
-</p>
-
 ## What is Cypress?
 
 <p align="center">
@@ -64,7 +38,7 @@ yarn add cypress --dev
 
 ![installing-cli e1693232](https://user-images.githubusercontent.com/1271364/31740846-7bf607f0-b420-11e7-855f-41c996040d31.gif)
 
-To start the UI version of the cypress tests enter one of following commands. This will allow you to run a specific spec page, which should include multiple tests.
+To start the UI version of the cypress tests enter the following command. This will allow you to run a specific spec page, which should include multiple tests.
 
 ```bash
 npx cypress open
