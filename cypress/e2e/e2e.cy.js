@@ -48,6 +48,10 @@ describe('e2e - create and complete todo', () => {
             fixture: 'detail.json'
         }).as('detail')
 
+        cy.intercept('PUT', baseUrl + '/2', {
+            fixture: 'update.json'
+        }).as('update')
+
         cy.intercept('PUT', baseUrl + '/complete/2', {
             fixture: 'complete-todo2.json'
         }).as('complete')
@@ -55,10 +59,6 @@ describe('e2e - create and complete todo', () => {
         cy.intercept('GET', baseUrl , {
             fixture: 'updated-todos.json'
         }).as('updated-todos')
-
-        cy.intercept('PUT', baseUrl + '/2', {
-            fixture: 'update.json'
-        }).as('update')
 
         cy.get(todoPage.detailbutton.first).click()
         cy.wait('@detail')
