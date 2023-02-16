@@ -56,7 +56,6 @@ describe('e2e - create and complete todo', () => {
             fixture: 'complete-todo2.json'
         }).as('complete')
 
-
         cy.get(todoPage.detailbutton.first).click()
         cy.wait('@detail')
         
