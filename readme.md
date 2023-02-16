@@ -52,7 +52,7 @@ npx cypress run
 ```
 
 ## Exercise
-
+<p>
 Ik heb al enkele testen voorzien.
 Onder andere voor het updaten van de description van een todo item en het completen van een todo.
 Nu mogen jullie de todo-detail flow die achter deze knop zit automatiseren.
@@ -81,3 +81,4 @@ Stap 3
 -Je kan hier de updated-todos.json aan meegeven die beschikbaar is in de fixtures. 
 
 Reminder: Je gaat een nieuwe file willen aanmaken om al je page-objects in te declareren 
+</p>
